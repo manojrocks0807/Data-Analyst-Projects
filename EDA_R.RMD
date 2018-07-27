@@ -1,0 +1,48 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+library(dplyr)
+library(knitr)
+library(reshape2)
+library(ggplot2)
+library(gridExtra)
+library(GGally)
+install.packages("corrplot")
+install.packages("doBy")
+library(doBy)
+library(corrplot)
+
+I will load data and have look at first few rows:
+```{r}
+wine_data <- read.csv('wineQualityWhites.csv')
+head(wine_data)
+```
+
+Lets look at the data structure and data types:
+```{r}
+str(wine_data)
+```
+
+Let's have check if there are any missing rows using summary:
+```{r}
+sum(is.na(wine_data))
+```
+
+#Introduction
+
+The reason me to select this data set because I have an interest  in knowing about the wine making facts. This data set contains 13 variables and 4898 observations with integer and numeric data types. These 13 variables describe the different properties of wine such as acidity, sugar and alcohol etc. The intention for analyzing this data set is to find the relation between different components and the wine quality.
+
+#Univariate Plots Section
+
+At first, lets plot a bar to give a quick view about the distribution of the quality  rates and running summary to generate stats related quality in  dataset.
+
+```{r}
+ggplot2::ggplot(wine_data, aes(x = factor(quality))) + geom_bar()
+
+summary(wine_data$quality)
+```
+
+
+
