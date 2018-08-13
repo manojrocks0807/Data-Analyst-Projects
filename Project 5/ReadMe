@@ -1,1 +1,3 @@
 This file contains my files related to Project 5
+
+Data Wrangling and Analysis using Python on dataset of tweet archive of Twitter user @dogrates, also known as WeRateDogs. In this project initially gathered data from different sources and then assessed the data for cleaning as required for analysis. Then the data set was cleaned and analysis was done with statistical results as well with different visualizations for this data set.
